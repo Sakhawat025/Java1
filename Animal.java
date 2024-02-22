@@ -1,26 +1,31 @@
 public class Animal {
-    private int tiger;
-    private int lion;
-
-    public static void bite (){
-        System.out.println("Tigers are territorial and usually solitary in nature");
+    String name;
+    String type;
+    boolean venomous;
+    String food;
+    // Default Constructor
+    Animal(){
+    this.name="Lion";
+    this.type="Mammal";
     }
-    public static void venowous(){
-        System.out.println("Lions are highly territorial and occupy the same area for generations.");
+    // Parameterized Constructor
+    Animal(String name,String type,boolean venomous){
+    this.name=name;
+    this.type=type;
+    this.venomous=true;
     }
-    public static void main(String agrs[]){
-        Animal animalTiger=new Animal();
-        Animal animalLion=new Animal();
-        /*Animal.tiger="10";
-        Animal.lion="20";*/
-
-        animalTiger.bite();
-        animalLion.venowous();
-
-        animalTiger.tiger=10;
-        animalLion.lion=20;
-
-        System.out.println("Tiger number is "+animalTiger.tiger);
-        System.out.println("Lion number is "+animalLion.lion);
+    
+    //Copy Parameterized Constructor
+    Animal(String name,String type,String food){
+    this.name=name;
+    this.type=type;
+    this.food=food;
     }
-}
+    // eat methoad.
+    void eat(){
+    System.out.println(name+" is eating Plankton");
+    }
+    void bite(){
+    System.out.println(name + " bites with venom!");
+    }
+    }
